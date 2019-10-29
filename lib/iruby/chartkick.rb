@@ -26,5 +26,16 @@ module IRuby
     def chartkick_javascript_tag
       %q{<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.3.0/chartkick.min.js"/>}
     end
+
+    def plot(data, type: :line)
+      chart =
+        case type
+        when :line then line_chart(data)
+        when :bar  then bar_chart(data)
+        else line_chart(data)
+        end
+
+      ::IRuby.html(chart)
+    end
   end
 end
