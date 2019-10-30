@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "chartkick/iruby"
+require "iruby/chartkick"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
