@@ -19,12 +19,18 @@ module IRuby
         ]
       end
 
+      def chartkick_dir
+        @chartkick_dir ||= Gem::Specification.find_by_name("chartkick").gem_dir
+      end
+
       def adapter_javascript_tag
-        %q{<script src="https://www.gstatic.com/charts/loader.js"/>}
+        js = File.read("#{chartkick_dir}/vendor/assets/javascripts/Chart.bundle.js")
+        %q{<script type="text/javascript">#{js}</script>}
       end
 
       def chartkick_javascript_tag
-        %q{<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.3.0/chartkick.min.js"/>}
+        js = File.read("#{chartkick_dir}/vendor/assets/javascripts/chartkick.js")
+        %q{<script type="text/javascript">#{js}</script>}
       end
 
       def randomized_dom_id
