@@ -9,28 +9,31 @@ module IRuby
       end
 
       def js_prefix
-        javascript_tags.join("\n")
+        <<-JS
+          <script type="text/javascript">
+            #{adapter_javascript}
+          </script>
+          <script type="text/javascript">
+            #{chartkick_javascript}
+          </script>
+        JS
       end
 
-      def javascript_tags
-        tags = [
-          adapter_javascript_tag,
-          chartkick_javascript_tag
+      def javascripts
+        [
+          adapter_javascript,
+          chartkick_javascript
         ]
       end
 
-      def chartkick_dir
-        @chartkick_dir ||= Gem::Specification.find_by_name("chartkick").gem_dir
+      def adapter_javascript
+        adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "adapter.js")
+        File.read(adapter_js_path)
       end
 
-      def adapter_javascript_tag
-        js = File.read("#{chartkick_dir}/vendor/assets/javascripts/Chart.bundle.js")
-        %q{<script type="text/javascript">#{js}</script>}
-      end
-
-      def chartkick_javascript_tag
-        js = File.read("#{chartkick_dir}/vendor/assets/javascripts/chartkick.js")
-        %q{<script type="text/javascript">#{js}</script>}
+      def chartkick_javascript
+        chartkick_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "chartkick.js")
+        File.read(chartkick_js_path)
       end
 
       def randomized_dom_id
