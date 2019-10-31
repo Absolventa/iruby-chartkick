@@ -38,3 +38,6 @@ data = {
 IRuby::Chartkick::LineChart.new(data).plot
 ```
 
+### In a Jupyter notebook:
+
+![Bildschirmfoto 2019-10-31 um 14 13 27](https://user-images.githubusercontent.com/3685123/67949871-d9688180-fbe8-11e9-9930-ceea4f42bf61.png)
