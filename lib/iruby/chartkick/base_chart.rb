@@ -4,6 +4,10 @@ module IRuby
     class BaseChart
       include ::Chartkick::Helper
 
+      def initialize(data)
+        @data = data
+      end
+
       def js_prefix
         javascript_tags.join("\n")
       end
