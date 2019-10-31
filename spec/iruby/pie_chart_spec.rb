@@ -18,7 +18,7 @@ RSpec.describe IRuby::Chartkick::PieChart do
     end
 
     it "knows how to construct custom randomized DOM id for chart canvas" do
-      expect(subject.randomized_dom_id).to start_with("iruby-chartkick-barchart")
+      expect(subject.randomized_dom_id).to start_with("iruby-chartkick-piechart")
     end
   end
 end
