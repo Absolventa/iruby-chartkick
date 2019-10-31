@@ -19,20 +19,18 @@ module IRuby
         JS
       end
 
-      def javascripts
-        [
-          adapter_javascript,
-          chartkick_javascript
-        ]
+      def chartkick_dir
+        @chartkick_dir ||= Gem::Specification.find_by_name("chartkick").gem_dir
       end
 
       def adapter_javascript
+        # adapter_js_path = "#{chartkick_dir}/vendor/assets/javascripts/Chart.bundle.js"
         adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "adapter.js")
         File.read(adapter_js_path)
       end
 
       def chartkick_javascript
-        chartkick_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "chartkick.js")
+        chartkick_js_path = "#{chartkick_dir}/vendor/assets/javascripts/chartkick.js"
         File.read(chartkick_js_path)
       end
 
