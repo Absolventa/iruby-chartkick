@@ -6,28 +6,35 @@ You like writing [Ruby within Juypter](https://github.com/SciRuby/iruby/) noteb
 
 ### Installation
 
-		gem install iruby-chartkick
+	gem install iruby-chartkick
 
 ### Usage
 
 You can either include the module `IRuby::Chartkick` and use the wrapper methods, like `line_chart`:
 	
-		include IRuby::Chartkick
+```Ruby
+include IRuby::Chartkick
 		
-		data = {
-			2019 => 1,
-			2020 => 122,
-  			2021 => 34
-		}
-
-		line_chart(data)
+data = {
+  2019 => 1,
+  2020 => 122,
+  2021 => 34
+}
+ 
+line_chart(data)
+```
 
 Or you use the chart wrapper classes directly: 
 
-		data = {
-			2019 => 1,
-			2020 => 122,
-  			2021 => 34
-		}
+```Ruby
+include IRuby::Chartkick
+		
+data = {
+  2019 => 1,
+  2020 => 122,
+  2021 => 34
+}
 
-		IRuby::Chartkick::LineChart.new(data).plot
+IRuby::Chartkick::LineChart.new(data).plot
+```
+
