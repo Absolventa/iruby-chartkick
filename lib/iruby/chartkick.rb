@@ -9,16 +9,6 @@ require "iruby/chartkick/pie_chart"
 
 module IRuby
   module Chartkick
-    class BarChart < IRuby::Chartkick::BaseChart
-      def initialize(data)
-        @data = data
-      end
-
-      def plot
-        ::IRuby.html(js_prefix + bar_chart(@data, id: randomized_dom_id))
-      end
-    end
-
     def line_chart(data)
       LineChart.new(data).plot
     end
