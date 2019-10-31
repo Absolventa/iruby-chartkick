@@ -16,5 +16,9 @@ RSpec.describe IRuby::Chartkick::BarChart do
       expect(::IRuby).to receive(:html).with(any_args).at_least(1)
       subject.plot
     end
+
+    it "knows how to construct custom randomized DOM id for chart canvas" do
+      expect(subject.randomized_dom_id).to start_with("iruby-chartkick-barchart")
+    end
   end
 end

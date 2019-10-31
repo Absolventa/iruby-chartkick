@@ -26,6 +26,10 @@ module IRuby
       def chartkick_javascript_tag
         %q{<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.3.0/chartkick.min.js"/>}
       end
+
+      def randomized_dom_id
+        "#{self.class.to_s.downcase.gsub("::", "-")}-#{rand(100000)}"
+      end
     end
 
     class LineChart < IRuby::Chartkick::BaseChart
@@ -34,7 +38,7 @@ module IRuby
       end
 
       def plot
-        ::IRuby.html(js_prefix + line_chart(@data, id: rand(100000).to_s))
+        ::IRuby.html(js_prefix + line_chart(@data, id: randomized_dom_id))
       end
     end
 
@@ -44,7 +48,7 @@ module IRuby
       end
 
       def plot
-        ::IRuby.html(js_prefix + bar_chart(@data, id: rand(100000).to_s))
+        ::IRuby.html(js_prefix + bar_chart(@data, id: randomized_dom_id))
       end
     end
 
