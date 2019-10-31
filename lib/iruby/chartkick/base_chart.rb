@@ -27,7 +27,7 @@ module IRuby
       end
 
       def adapter_javascript
-        adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "adapter.js")
+        adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "google_charts_loader.js")
         File.read(adapter_js_path)
       end
 
