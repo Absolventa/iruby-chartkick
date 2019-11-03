@@ -8,6 +8,7 @@ require "iruby/chartkick/bar_chart"
 require "iruby/chartkick/pie_chart"
 require "iruby/chartkick/area_chart"
 require "iruby/chartkick/scatter_chart"
+require "iruby/chartkick/geo_chart"
 
 module IRuby
   module Chartkick
@@ -28,7 +29,11 @@ module IRuby
     end
 
     def scatter_chart(data)
-      AreaChart.new(data).plot
+      ScatterChart.new(data).plot
+    end
+
+    def geo_chart(data)
+      GeoChart.new(data).plot
     end
   end
 end
