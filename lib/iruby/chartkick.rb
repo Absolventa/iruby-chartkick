@@ -9,6 +9,7 @@ require "iruby/chartkick/pie_chart"
 require "iruby/chartkick/area_chart"
 require "iruby/chartkick/scatter_chart"
 require "iruby/chartkick/geo_chart"
+require "iruby/chartkick/timeline"
 
 module IRuby
   module Chartkick
@@ -34,6 +35,10 @@ module IRuby
 
     def geo_chart(data)
       GeoChart.new(data).plot
+    end
+
+    def timeline(data)
+      Timeline.new(data).plot
     end
   end
 end
