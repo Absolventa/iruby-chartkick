@@ -9,14 +9,13 @@ module IRuby
       end
 
       def js_prefix
-        <<-JS
-          <script type="text/javascript">
-            #{adapter_javascript}
-          </script>
-          <script type="text/javascript">
-            #{chartkick_javascript}
-          </script>
-        JS
+        javascripts.map do |js|
+          <<-JS
+            <script type="text/javascript">
+              #{js}
+            </script>
+          JS
+        end.join("\n")
       end
 
       def javascripts
