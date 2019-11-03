@@ -5,6 +5,7 @@ require "iruby/chartkick/version"
 require "iruby/chartkick/base_chart"
 require "iruby/chartkick/line_chart"
 require "iruby/chartkick/bar_chart"
+require "iruby/chartkick/column_chart"
 require "iruby/chartkick/pie_chart"
 require "iruby/chartkick/area_chart"
 require "iruby/chartkick/scatter_chart"
@@ -19,6 +20,10 @@ module IRuby
 
     def bar_chart(data)
       BarChart.new(data).plot
+    end
+
+    def column_chart(data)
+      ColumnChart.new(data).plot
     end
 
     def pie_chart(data)
