@@ -2,6 +2,8 @@
 
 ### HEAD (not released yet)
 
+### v0.2.0
+
 * Support for area charts
 * Support for scatter plots
 * Support for timeline

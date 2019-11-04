@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    iruby-chartkick (0.1.0)
+    iruby-chartkick (0.2.0)
       chartkick
       iruby
 
