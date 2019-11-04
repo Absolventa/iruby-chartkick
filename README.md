@@ -38,6 +38,16 @@ data = {
 IRuby::Chartkick::LineChart.new(data).plot
 ```
 
-### In a Jupyter notebook:
+### Examples:
 
-![Bildschirmfoto 2019-10-31 um 14 13 27](https://user-images.githubusercontent.com/3685123/67949871-d9688180-fbe8-11e9-9930-ceea4f42bf61.png)
+
+![Bildschirmfoto 2019-11-04 um 16 57 36](https://user-images.githubusercontent.com/3685123/68135598-3be0bb00-ff24-11e9-9d09-237c8aeb15d8.png)
+![Bildschirmfoto 2019-11-04 um 16 54 38](https://user-images.githubusercontent.com/3685123/68135613-426f3280-ff24-11e9-96a0-0e3cfe834524.png)
+![Bildschirmfoto 2019-11-04 um 16 55 35](https://user-images.githubusercontent.com/3685123/68135621-456a2300-ff24-11e9-8de9-a95d6b5d67c6.png)
+![Bildschirmfoto 2019-11-04 um 16 56 04](https://user-images.githubusercontent.com/3685123/68135631-47cc7d00-ff24-11e9-982a-90885b8ddf94.png)
+![Bildschirmfoto 2019-11-04 um 16 56 17](https://user-images.githubusercontent.com/3685123/68135638-48fdaa00-ff24-11e9-9a51-36494509c3b7.png)
+![Bildschirmfoto 2019-11-04 um 16 56 31](https://user-images.githubusercontent.com/3685123/68135648-4bf89a80-ff24-11e9-8ba0-fae17d670995.png)
+![Bildschirmfoto 2019-11-04 um 16 47 49](https://user-images.githubusercontent.com/3685123/68135661-5024b800-ff24-11e9-96ad-9c4deba61c57.png)
+![Bildschirmfoto 2019-11-04 um 16 56 17](https://user-images.githubusercontent.com/3685123/68135689-59158980-ff24-11e9-8fab-8ab529dfaeb4.png)
+![Bildschirmfoto 2019-11-04 um 16 43 15](https://user-images.githubusercontent.com/3685123/68135699-5d41a700-ff24-11e9-9267-ee37516620c8.png)
+![Bildschirmfoto 2019-11-04 um 16 46 17](https://user-images.githubusercontent.com/3685123/68135704-5f0b6a80-ff24-11e9-8165-e682ea70975d.png)
