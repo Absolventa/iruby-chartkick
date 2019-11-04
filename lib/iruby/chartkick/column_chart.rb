@@ -2,8 +2,8 @@
 module IRuby
   module Chartkick
     class ColumnChart < IRuby::Chartkick::BaseChart
-      def plot
-        ::IRuby.html(js_prefix + column_chart(@data, id: randomized_dom_id))
+      def plot(*args)
+        ::IRuby.html(js_prefix + column_chart(@data, **ArgumentModifier[args, self]))
       end
     end
   end

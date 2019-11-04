@@ -14,36 +14,36 @@ require "iruby/chartkick/timeline"
 
 module IRuby
   module Chartkick
-    def line_chart(data)
-      LineChart.new(data).plot
+    def line_chart(data, **args)
+      LineChart.new(data).plot(**args)
     end
 
-    def bar_chart(data)
-      BarChart.new(data).plot
+    def bar_chart(data, **args)
+      BarChart.new(data).plot(**args)
     end
 
-    def column_chart(data)
-      ColumnChart.new(data).plot
+    def column_chart(data, **args)
+      ColumnChart.new(data).plot(**args)
     end
 
-    def pie_chart(data)
-      PieChart.new(data).plot
+    def pie_chart(data, **args)
+      PieChart.new(data).plot(**args)
     end
 
-    def area_chart(data)
-      AreaChart.new(data).plot
+    def area_chart(data, **args)
+      AreaChart.new(data).plot(**args)
     end
 
-    def scatter_chart(data)
-      ScatterChart.new(data).plot
+    def scatter_chart(data, **args)
+      ScatterChart.new(data).plot(**args)
     end
 
-    def geo_chart(data)
-      GeoChart.new(data).plot
+    def geo_chart(data, **args)
+      GeoChart.new(data).plot(**args)
     end
 
-    def timeline(data)
-      Timeline.new(data).plot
+    def timeline(data, **args)
+      Timeline.new(data).plot(**args)
     end
   end
 end

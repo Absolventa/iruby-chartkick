@@ -4,6 +4,17 @@ module IRuby
     class BaseChart
       include ::Chartkick::Helper
 
+      ArgumentModifier = ->(args, callee) do
+        modified = args.inject({}) do |sum, item|
+          item.each do |k, v|
+            sum[k] = v
+          end
+          sum
+        end
+        modified[:id] = callee.randomized_dom_id
+        modified
+      end
+
       def initialize(data)
         @data = data
       end

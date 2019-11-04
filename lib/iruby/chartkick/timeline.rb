@@ -2,8 +2,8 @@
 module IRuby
   module Chartkick
     class Timeline < IRuby::Chartkick::BaseChart
-      def plot
-        ::IRuby.html(js_prefix + timeline(@data, id: randomized_dom_id))
+      def plot(*args)
+        ::IRuby.html(js_prefix + timeline(@data, **ArgumentModifier[args, self]))
       end
     end
   end

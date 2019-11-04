@@ -20,5 +20,9 @@ RSpec.describe IRuby::Chartkick::LineChart do
     it "knows how to construct custom randomized DOM id for chart canvas" do
       expect(subject.randomized_dom_id).to start_with("iruby-chartkick-linechart")
     end
+
+    it "supports keyword modifier arguments" do
+      expect { subject.plot(height: 10, width: 10) }.not_to raise_error
+    end
   end
 end

@@ -7,6 +7,7 @@
 * Support for timeline
 * Support for geo charts
 * Support for column charts
+* Support keyword arguments for charts like heigth, width etc.
 
 ### v0.1.0
 
