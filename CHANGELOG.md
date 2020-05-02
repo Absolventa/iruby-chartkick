@@ -2,6 +2,10 @@
 
 ### HEAD (not released yet)
 
+### v0.2.1
+
+* Only load JS scripts once
+
 ### v0.2.0
 
 * Support for area charts
