@@ -11,6 +11,18 @@ RSpec.describe IRuby::Chartkick do
     let(:notebook) { TestNotebook.new }
     let(:data) { { 1 => 1, 2 => 2 } }
 
+    describe "js script loading" do
+      before(:all) do
+        IRuby::Chartkick.mark_js_as_unloaded
+      end
+
+      it "only loads JS scripts once" do
+        expect(IRuby::Chartkick).to receive(:mark_js_as_loaded).once.and_call_original
+        IRuby::Chartkick::LineChart.new(data).plot
+        IRuby::Chartkick::LineChart.new(data).plot
+      end
+    end
+
     describe "#line_chart" do
       let(:chart) { IRuby::Chartkick::LineChart.new(data) }
 

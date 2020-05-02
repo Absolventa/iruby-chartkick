@@ -20,9 +20,12 @@ module IRuby
       end
 
       def js_prefix
+        return "" if IRuby::Chartkick.js_loaded?
+        IRuby::Chartkick.mark_js_as_loaded
+
         javascripts.map do |js|
           <<-JS
-            <script type="text/javascript">
+            <script name="iruby-chartkick-charting-engine-loaders" type="text/javascript">
               #{js}
             </script>
           JS

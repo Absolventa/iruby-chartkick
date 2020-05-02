@@ -14,6 +14,22 @@ require "iruby/chartkick/timeline"
 
 module IRuby
   module Chartkick
+    class << self
+      def js_loaded?
+        @@js_loaded
+      end
+
+      def mark_js_as_loaded
+        @@js_loaded = true
+      end
+
+      def mark_js_as_unloaded
+        @@js_loaded = false
+      end
+    end
+
+    mark_js_as_unloaded
+
     def line_chart(data, **args)
       LineChart.new(data).plot(**args)
     end
