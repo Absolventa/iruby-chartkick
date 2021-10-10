@@ -1,0 +1,14 @@
+{
+  "name": "iruby-chartkick",
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js ./vendor/assets/javascripts/main.js --output-path='./vendor/assets/javascripts/' --output-filename=bundle.js --mode=production"
+  },
+  "dependencies": {
+    "chart.js": "^3.5.1",
+    "chartkick": "^4.0.5"
+  },
+  "devDependencies": {
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}
