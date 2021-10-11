@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     iruby-chartkick (0.3.0)
-      chartkick
+      chartkick (~> 4.0.5)
       iruby
 
 GEM
