@@ -1,6 +1,6 @@
 # iruby-chartkick [![build](https://github.com/Absolventa/iruby-chartkick/actions/workflows/build.yml/badge.svg)](https://github.com/Absolventa/iruby-chartkick/actions/workflows/build.yml)
 
-You like writing [Ruby within Juypter](https://github.com/SciRuby/iruby/) notebooks?  Awesome, you're not alone - we do so, too ☀️ Since we also fell in love with the handy charting API of [ankane/chartkick](https://github.com/ankane/chartkick), we wrote this little gem bringing them together.
+You like writing [Ruby within Juypter](https://github.com/SciRuby/iruby/) notebooks?  Awesome, you're not alone - we do so, too ☀️ Since we also fell in love with the handy charting API of [ankane/chartkick](https://github.com/ankane/chartkick), we wrote this little gem bringing them together.
 
 `iruby-chartkick` was made for easy plug-n-play plotting data using the awesomeness of chartkick within IRuby-backed Jupyter notebooks.
 
@@ -79,6 +79,11 @@ data = [
 line_chart(data)
 ```
 ![LineChart](https://user-images.githubusercontent.com/3856862/136750966-3fe8908d-356c-477e-8c0e-220bc302d07e.png)
+
+```ruby
+line_chart(data, points: false)
+```
+![LineChart](https://user-images.githubusercontent.com/3856862/136767403-a2839f21-d6af-45af-a710-2f9f0ed2203c.png)
 
 ```ruby
 line_chart(data, points: false, width: "700px", min: 50, max: 300)
