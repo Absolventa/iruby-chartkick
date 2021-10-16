@@ -23,30 +23,16 @@ module IRuby
         return "" if IRuby::Chartkick.js_loaded?
         IRuby::Chartkick.mark_js_as_loaded
 
-        javascripts.map do |js|
-          <<-JS
-            <script name="iruby-chartkick-charting-engine-loaders" type="text/javascript">
-              #{js}
-            </script>
-          JS
-        end.join("\n")
+        <<-JS
+          <script name="iruby-chartkick-charting-engine-loaders" type="text/javascript">
+            #{javascript}
+          </script>
+        JS
       end
 
-      def javascripts
-        [
-          adapter_javascript,
-          chartkick_javascript
-        ]
-      end
-
-      def adapter_javascript
-        adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "google_charts_loader.js")
+      def javascript
+        adapter_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "bundle.js")
         File.read(adapter_js_path)
-      end
-
-      def chartkick_javascript
-        chartkick_js_path = File.join(File.dirname(__FILE__), "..", "..", "..", "vendor", "assets", "javascripts", "chartkick.js")
-        File.read(chartkick_js_path)
       end
 
       def randomized_dom_id

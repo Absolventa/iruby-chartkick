@@ -2,6 +2,12 @@
 
 ### HEAD (not released yet)
 
+### v0.3.0
+
+* Update all javascript (chartkick v.4.0.5 & chart.js v.3.5.1)
+* Use webpack to create javascript bundle
+* Switch from travis to github actions
+
 ### v0.2.1
 
 * Only load JS scripts once
