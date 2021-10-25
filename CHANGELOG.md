@@ -2,6 +2,10 @@
 
 ### HEAD (not released yet)
 
+### v0.3.1
+* Update javascript (chartkick v.4.1.0 & chart.js v.3.6.0)
+* Update chartkick gem (4.1.0)
+
 ### v0.3.0
 
 * Update all javascript (chartkick v.4.0.5 & chart.js v.3.5.1)
