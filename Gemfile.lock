@@ -2,13 +2,13 @@ PATH
   remote: .
   specs:
     iruby-chartkick (0.3.0)
-      chartkick (~> 4.0.5)
+      chartkick (~> 4.1.0)
       iruby
 
 GEM
   remote: https://rubygems.org/
   specs:
-    chartkick (4.0.5)
+    chartkick (4.1.0)
     data_uri (0.1.0)
     diff-lcs (1.4.4)
     ffi (1.15.4)
