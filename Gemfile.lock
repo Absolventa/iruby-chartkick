@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    iruby-chartkick (0.3.1)
+    iruby-chartkick (0.5.1)
       chartkick (~> 5.1.0)
       iruby
 
@@ -11,9 +11,7 @@ GEM
     chartkick (5.1.0)
     data_uri (0.1.0)
     diff-lcs (1.5.1)
-    ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86_64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0)
     ffi-rzmq (2.0.7)
       ffi-rzmq-core (>= 1.0.7)
     ffi-rzmq-core (1.0.7)
@@ -59,12 +57,6 @@ GEM
     rspec-support (3.13.1)
     stringio (3.1.1)
 
-PLATFORMS
-  arm64-darwin-22
-  arm64-darwin-23
-  x86_64-darwin-20
-  x86_64-linux
-
 DEPENDENCIES
   bundler
   iruby-chartkick!
@@ -72,4 +64,4 @@ DEPENDENCIES
   rspec (~> 3.13.0)
 
 BUNDLED WITH
-   2.2.15
+   2.5.21
