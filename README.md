@@ -11,24 +11,24 @@ You like writing [Ruby within Juypter](https://github.com/SciRuby/iruby/) notebo
 ### Usage
 
 You can either include the module `IRuby::Chartkick` and use the wrapper methods, like `line_chart`:
-	
+
 ```ruby
 include IRuby::Chartkick
-		
+
 data = {
   2019 => 1,
   2020 => 122,
   2021 => 34
 }
- 
+
 line_chart(data)
 ```
 
-Or you use the chart wrapper classes directly: 
+Or you use the chart wrapper classes directly:
 
 ```ruby
 include IRuby::Chartkick
-		
+
 data = {
   2019 => 1,
   2020 => 122,
