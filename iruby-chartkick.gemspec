@@ -5,7 +5,7 @@ require "iruby/chartkick/version"
 Gem::Specification.new do |spec|
   spec.name          = "iruby-chartkick"
   spec.version       = IRuby::Chartkick::VERSION
-  spec.authors       = ["Robin Stammer\n"]
+  spec.authors       = ["Robin Stammer", "Victor Cobos"]
   spec.email         = ["robin.stammer@posteo.de"]
 
   spec.summary       = %q{Minimalistic wrapper around chartkick to use it within IRuby}

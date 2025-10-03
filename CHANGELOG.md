@@ -5,7 +5,7 @@
 ### v0.4.0
 
 * Upgrade Chartkick to v5.0.1
-* Drop Support for Ruby versions < 3.1
+* Drop Support for Ruby versions < 3.3 (In most cases it should work fine, but we won't actively check!)
 * Add Support for Ruby v3.3.5
 
 ### v0.3.1
