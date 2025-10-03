@@ -5,7 +5,7 @@ require "iruby/chartkick/version"
 Gem::Specification.new do |spec|
   spec.name          = "iruby-chartkick"
   spec.version       = IRuby::Chartkick::VERSION
-  spec.authors       = ["Robin Stammer\n"]
+  spec.authors       = ["Robin Stammer", "Victor Cobos"]
   spec.email         = ["robin.stammer@posteo.de"]
 
   spec.summary       = %q{Minimalistic wrapper around chartkick to use it within IRuby}
@@ -26,9 +26,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "iruby"
-  spec.add_dependency "chartkick", "~> 4.1.0"
+  spec.add_dependency "chartkick", "~> 5.1.0"
 
   spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rake", "~> 13.2.1"
+  spec.add_development_dependency "rspec", "~> 3.13.0"
 end
